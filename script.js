@@ -10,7 +10,9 @@ function returnAPromise(arr){
 	}))
 }
 
-returnAPromise([1,2,3,4])
+let str = prompt()
+let arr = str.trim().split(" ");
+returnAPromise(arr)
 	
 .then((arr)=>{
 	let oddArr = arr.filter((value)=>(value % 2 !== 0))
