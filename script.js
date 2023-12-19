@@ -13,18 +13,17 @@ function returnAPromise(arr){
 
 returnAPromise([1,2,3,4])	
 .then((arr)=>{
-	let oddArr = arr.filter((value)=>(value % 2 !== 0))
+	let evenArr = arr.filter((value)=>(value % 2 === 0))
      setTimeout(()=>{
-		container.innerHTML = oddArr.join(" "); 
+		container.innerHTML = evenArr.join(" "); 
 	 },1000)
-	return arr;
+	return evenArr;
 })
 	
-.then((arr)=>{
-	let even = arr.filter((value)=> value % 2 === 0)
-	let even1 = even.map((value)=> value*2)
+.then((EvenArr)=>{
+	let arr = EvenArr.map((value)=> value*2)
 	setTimeout(()=>{
-		container.innerHTML = even1.join(","); 
+		container.innerHTML = arr.join(","); 
 	 },2000)
 })
 
