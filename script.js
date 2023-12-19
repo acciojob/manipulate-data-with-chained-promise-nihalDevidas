@@ -7,7 +7,8 @@ function returnAPromise(arr){
 		setTimeout(()=>{
 			resolve(arr)
 		},3000)
-	}))
+	})
+		   )
 }
 
 
