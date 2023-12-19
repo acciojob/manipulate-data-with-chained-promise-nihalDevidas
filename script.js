@@ -22,8 +22,9 @@ returnAPromise([1,2,3,4])
 	
 .then((arr)=>{
 	let even = arr.filter((value)=> value % 2 === 0)
+	let even1 = even.map((value)=> value*2)
 	setTimeout(()=>{
-		container.innerHTML = even.join(","); 
+		container.innerHTML = even1.join(","); 
 	 },2000)
 })
 
